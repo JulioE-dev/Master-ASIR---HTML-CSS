@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+/* Oculta el checkbox */
+
+.toggle-menu {
+  display: none;
+}
+
+/* Ícono hamburguesa oculto en desktop */
+
+.nav-icon {
+  color: #fff;
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Estilos del nav por defecto */
+
+#nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  #nav ul {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    background-color: #1e2326;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Mostrar menú cuando checkbox está activo */
+
+  .toggle-menu:checked ~ #nav ul {
+    display: flex;
+  }
+
+  .nav-icon {
+    display: block;
+  }
+
+  /* Alinear menú con ícono */
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
+
+/* Fondo compartido para todas las secciones */
+
+.fondo {
+  position: relative;
+  background-image: url('assets/images/piclumen-1746732645436.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Capa oscura para mejorar contraste del texto */
+
+.fondo::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.7);
+  z-index: -1;
+}
+
+/* MENÚ */
+
+.contenedor-header {
+  background: #1e2326;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.contenedor-header header {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo a {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #abebc6;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.contenedor-header header ul {
+  display: flex;
+  list-style: none;
+}
+
+.contenedor-header header nav ul li a {
+  color: #fff;
+  margin: 0 15px;
+  padding: 3px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.contenedor-header nav ul li a:hover {
+  color: #abebc6;
+}
+
+.nav-responsive {
+  background-color: #abebc6;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Estilo general para todas las secciones */
+
+.seccion {
+  color: #fff;
+  padding: 100px 20px 60px 20px;
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* SECCIÓN INICIO */
+
+.inicio .contenido-banner {
+  padding: 40px;
+  background-color: rgba(76, 109, 128, 0.9);
+  max-width: 350px;
+  text-align: center;
+  border-radius: 40px;
+  margin: auto;
+}
+
+.contenedor-img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.REDES {
+  margin-top: 20px;
+}
+
+.REDES a {
+  color: #abebc6;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.REDES a:hover {
+  color: #ffffff;
+}
+
+/* BIO */
+
+.BIO h2 {
+  color: #1CB698;
+  font-size: 50px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.BIO .contenido-seccion p {
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.BIO .contenido-seccion p b {
+  color: #1CB698;
+  font-weight: bold;
+}
+
+/* RELEASES */
+
+.RELEASES h2 {
+  color: #1CB698;
+  font-size: 50px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.RELEASES .contenido-seccion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr, 2); 
+  gap: 20px; 
+}
+
+.RELEASES iframe {
+  width: 100%;      
+  height: 180px;    
+}
+
+
+  /* SUNO-TRACKS */
+
+.SUNO-TRACKS h2 {
+  color: #1CB698;
+  font-size: 50px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  padding: 20px 0;
+}  
+
+.SUNO-TRACKS .contenido-seccion {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr, 2); 
+  gap: 20px; 
+}
+
+.SUNO-TRACKS iframe {
+  width: 100%;      
+  height: 180px;    
+}
+
+/* SESSIONS */
+
+.SESSIONS h2 {
+  color: #1CB698;
+  font-size: 50px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  padding: 20px 0;
+  
+}
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e2326;
+  color: #fff;
+  font-size: 14px;
+}
